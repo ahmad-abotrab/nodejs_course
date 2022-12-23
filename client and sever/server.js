@@ -1,7 +1,14 @@
 const http = require('http');
 const fs = require('fs');
+const lodash = require('lodash');
 const server = http.createServer((request, response) => {
+    const num = lodash.random(0,20);
+    console.log(num);
 
+    const great = lodash.once(()=>{
+        console.log("hello");
+    });
+    great();
     //  test send basic text and tag html
 
     // response.setHeader('content-type','text/html');
@@ -26,31 +33,31 @@ const server = http.createServer((request, response) => {
 
 
     // Basic Route
-    response.setHeader('content-type', 'text/html');
-    let path = './views/';
-    switch (request.url) {
-        case '/': {
-            path += 'index.html';
-            break;
-        }
-        case '/about': {
-            path += 'about.html';
-            break;
-        }
-        default: {
-            path += '404.html';
-            response.statusCode = 404;
-            break;
-        }
-    }
-    fs.readFile(path,(err,data)=>{
-        if(err){
-            console.log(err);
-            response.end();
-        }
-        response.write(data);
-        response.end();
-    });
+    // response.setHeader('content-type', 'text/html');
+    // let path = './views/';
+    // switch (request.url) {
+    //     case '/': {
+    //         path += 'index.html';
+    //         break;
+    //     }
+    //     case '/about': {
+    //         path += 'about.html';
+    //         break;
+    //     }
+    //     default: {
+    //         path += '404.html';
+    //         response.statusCode = 404;
+    //         break;
+    //     }
+    // }
+    // fs.readFile(path,(err,data)=>{
+    //     if(err){
+    //         console.log(err);
+    //         response.end();
+    //     }
+    //     response.write(data);
+    //     response.end();
+    // });
 });
 
 server.listen((3000), 'localhost', () => {

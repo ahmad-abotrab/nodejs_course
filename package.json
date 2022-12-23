@@ -1,12 +1,23 @@
 {
-  "name": "untitled",
+  "name": "tutorial",
   "version": "1.0.0",
-  "description": "",
+  "description": "# link videos watch it  .... https://www.youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU # what will we learn - [x] what is node js  - [x] nodejs basics - [x] client and server",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "ahmad",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmad-abotrab/nodejs_course.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ahmad-abotrab/nodejs_course/issues"
+  },
+  "homepage": "https://github.com/ahmad-abotrab/nodejs_course#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
